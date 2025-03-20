@@ -1,0 +1,138 @@
+.right-container {
+    width: 80%;
+    margin-left: 20%;
+    padding: 2rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: #E2E8F0;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-info {
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.section-info h2 {
+    color: var(--second-color-text);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Projects Section */
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.card-projects {
+    background: var(--second-color);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.container-img-card {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.container-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-description-card {
+    padding: 1rem;
+    color: var(--first-color-text);
+}
+
+.container-description-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.container-description-card p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.container-description-card a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--third-color);
+    color: var(--first-color-text);
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.container-description-card a:hover {
+    background: var(--first-color);
+}
+
+/* References Section */
+.card-references {
+    background: var(--second-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    color: var(--first-color-text);
+    margin-bottom: 1rem;
+}
+
+.card-references p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-references span {
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+/* Experience Section */
+.container-exp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-experiences {
+    background: var(--second-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    color: var(--first-color-text);
+}
+
+.card-experiences img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.card-experiences progress {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .right-container {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+
+hr{
+    height: 0.5rem;
+    border: none;
+    color: #94A3B8;
+    background-color: #94A3B8;
+    margin-bottom: 1rem;
+}

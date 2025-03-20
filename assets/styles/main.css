@@ -1,0 +1,43 @@
+:root {
+    --first-color: #1B2A41;
+    --second-color: #324A5F;
+    --third-color: #021630;
+    --first-color-text: #FFFFFF;
+    --second-color-text: #1B2A41;
+    
+    --mobile: 480px;
+    --tablet: 768px;
+    --desktop: 1024px;
+
+    --header-height: 4rem;
+    --container-width: 90%;
+    --container-max: 1200px;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+}
+
+@media screen and (min-width: var(--desktop)) {
+    
+}
+
+@media screen and (min-width: var(--tablet)) {
+    
+}
+
+@media screen and (min-width: var(--phone)) {
+    
+}
