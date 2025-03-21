@@ -29,15 +29,3 @@ body{
     height: 100vh;
     display: flex;
 }
-
-@media screen and (min-width: var(--desktop)) {
-    
-}
-
-@media screen and (min-width: var(--tablet)) {
-    
-}
-
-@media screen and (min-width: var(--phone)) {
-    
-}
