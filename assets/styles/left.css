@@ -1,5 +1,5 @@
-body > .left-container {
-    width: 20%;  
+body>.left-container {
+    width: 20%;
     height: 100%;
     background-color: var(--first-color);
     display: flex;
@@ -7,7 +7,7 @@ body > .left-container {
     align-items: center;
     position: fixed;
     top: 0;
-    left: 0;  
+    left: 0;
 }
 
 .profile-picture {
@@ -18,30 +18,37 @@ body > .left-container {
     object-fit: cover;
     border: 4px solid var(--second-color);
 }
-.bx.bxl-facebook-square{
-    color:#1877F2;
+
+.bx.bxl-facebook-square {
+    color: #1877F2;
     transition: 0.3s ease;
 }
-.bx.bxl-whatsapp{
-    color:#25D366;
+
+.bx.bxl-whatsapp {
+    color: #25D366;
     transition: 0.3s ease;
 }
-.bx.bxl-instagram{
-    color:#E4405F;
+
+.bx.bxl-instagram {
+    color: #E4405F;
     transition: 0.3s ease;
 }
-.bx.bxl-facebook-square:hover{
-    color:#4293ff;
+
+.bx.bxl-facebook-square:hover {
+    color: #4293ff;
     transform: scale(1.2);
 }
-.bx.bxl-whatsapp:hover{
-    color:#6de293 ;
-     transform: scale(1.2);
+
+.bx.bxl-whatsapp:hover {
+    color: #6de293;
+    transform: scale(1.2);
 }
-.bx.bxl-instagram:hover{
-    color:#ff7391;
-     transform: scale(1.2);
+
+.bx.bxl-instagram:hover {
+    color: #ff7391;
+    transform: scale(1.2);
 }
+
 .container-img-profile {
     width: 100%;
     padding: 1rem;
@@ -56,7 +63,7 @@ body > .left-container {
 
 h1.name-profile {
     color: var(--first-color-text);
-    font-size: 2; 
+    font-size: 2;
     width: 100%;
     word-break: normal;
     white-space: pre-wrap;
@@ -64,14 +71,14 @@ h1.name-profile {
     padding: 1.5rem;
 }
 
-.container-logo{
+.container-logo {
     width: 100%;
     display: flex;
     justify-content: center;
     padding: 2rem;
 }
 
-.container-logo>img.logo{
+.container-logo>img.logo {
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -94,20 +101,19 @@ h1.name-profile {
     font-size: 1.5rem;
 }
 
-.navbar-profile{
+.navbar-profile {
     list-style: none;
     text-align: center;
 }
 
-.navbar-profile>ul{
+.navbar-profile>ul {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 0;
 }
 
-.navbar-profile>ul>li>a{
+.navbar-profile>ul>li>a {
     color: white;
     font-size: 1.5rem;
 }
-
