@@ -1,27 +1,27 @@
 const projects = [
     {
-        idProject: 1,
+        idProject: 'project1',
         imgProject: '/assets/images/BetaDev.png',
         titleproject: 'Proyecto de REACT',
         descriptionproject: 'Proyecto muy interactivo de REACT donde el usuario puede dar instrucciones y la pagina se va a transformar en base a lo que este solicite.',
         linkproject: 'https://github.com/BetaDev55/React',
     },
     {
-        idProject: 2,
+        idProject: 'project2',
         imgProject: '/assets/images/BetaDev.png',
         titleproject: 'Zelda Game',
         descriptionproject: 'Primer proyecto en javascript, un juego de parejas con tematica de derrotar a los monstruos en Zelda.',
         linkproject: 'https://github.com/BetaDev55/ZeldaGame.JS',
     },
     {
-        idProject: 3,
+        idProject: 'project3',
         imgProject: '/assets/images/BetaDev.png',
         titleproject: 'Proyecto final Lumetrio',
         descriptionproject: 'Proyecto final para el curso de front end de Lumetrio, manejé lo tipico de frontend, Javascript, CSS, HTML, REACT y le añadí un gusto que tenía por hacer animaciones con SVGS.',
         linkproject: 'https://github.com/BetaDev55/ProyectoFinalLumetrioFER',
     },
     {
-        idProject: 4,
+        idProject: 'project4',
         imgProject: '/assets/images/BetaDev.png',
         titleproject: 'Proyecto final de Lumetrio en Python.',
         descriptionproject: 'Un buscaminas hecho puramente en python para la consola CMD.',
@@ -31,28 +31,28 @@ const projects = [
 
 const references = [
     {
-        id: 1,
+        id: 'reference1',
         name: "Santiago Betancur",
         position: "Desarrollador Front-End",
         phone: "+57 (301) 234-5678",
         email: "santiago.b@techcorp.com",
     },
     {
-        id: 2,
+        id: 'reference2',
         name: "Miguel Chen",
         position: "Líder Técnico",
         phone: "+57 (304) 567-8901",
         email: "m.chen@devteam.com",
     },
     {
-        id: 3,
+        id: 'reference3',
         name: "Laura Martínez",
         position: "Gerente de Proyectos",
         phone: "+57 (305) 678-9012",
         email: "l.martinez@projecthub.com",
     },
     {
-        id: 4,
+        id: 'reference4',
         name: "David Wilson",
         position: "Desarrollador Front-End",
         phone: "+57 (300) 789-0123",
@@ -62,28 +62,32 @@ const references = [
 
 const experiences = [
     {
-        id: 1,
-        languageName: "JavaScript",
-        progressPercentage: 35,
-        img: "",
+        id: 'experiences1',
+        languageName: "HTML",
+        progressPercentage: 80,
+        img: "/assets/images/HTML.png",
+        textPercentage: "80%",
     },
     {
-        id: 2,
-        nombreLenguaje: "JavaScript",
-        progressPercentage: 35,
-        img: "",
+        id: 'experiences2',
+        languageName: "CSS",
+        progressPercentage: 60,
+        img: "/assets/images/CSS.png",
+        textPercentage: "60%",
     },
     {
-        id: 3,
-        nombreLenguaje: "JavaScript",
-        progressPercentage: 35, 
-        img: "",
+        id: 'experiences3',
+        languageName: "Javascript",
+        progressPercentage: 40, 
+        img: "/assets/images/JS.png",    
+        textPercentage: "40%",
     },
     {
-        id: 4,
-        nombreLenguaje: "JavaScript",
-        progressPercentage: 35,
-        img: "",
+        id: 'experiences4',
+        languageName: "REACT",
+        progressPercentage: 30,
+        img: "/assets/images/REACT.png",
+        textPercentage: "30%",
     },
 ]
 
@@ -104,7 +108,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function loadSetionProjects() {
     projects.forEach(project => CreateCardProjects(project))
     references.forEach(references => createCardReferences(references))
-    experiences.forEach(experiences => createCardexperiences(experiences))
+    experiences.forEach(experiences => createCardExperiences(experiences))
 }
 
 function CreateCardProjects(project) {
@@ -169,6 +173,24 @@ function createCardReferences(references) {
     document.querySelector('.container-references').appendChild(cardReferences)
 }
 
+function createCardExperiences(experiences) {
+    const cardExperiences = document.createElement('div')
+    cardExperiences.classList.add('card-experiences')
+    const img = document.createElement('img')
+    img.src = experiences.img
+    img.alt = experiences.languageName
+    img.id = experiences.id
+    const progress = document.createElement('progress')
+    progress.value = experiences.progressPercentage
+    progress.max = 100
+    const textPercentage = document.createElement('p')
+    textPercentage.textContent = experiences.textPercentage
 
+    cardExperiences.appendChild(img)
+    cardExperiences.appendChild(progress)
+    cardExperiences.appendChild(textPercentage)
+
+    document.querySelector('.container-experiences').appendChild(cardExperiences)
+}
 
 loadSetionProjects()

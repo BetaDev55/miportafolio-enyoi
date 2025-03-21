@@ -83,10 +83,12 @@
     width: 8rem;
     margin-top: auto;
 }
-.container-references{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 1rem;
+
+.container-references {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  /* Increased minmax value */
+    gap: 1rem;
+    justify-items: center;
 }
 
 .container-description-card a:hover {
@@ -101,7 +103,7 @@ gap: 1rem;
     padding: 1.5rem;
     border-radius: 8px;
     color: var(--first-color-text);
-    margin-bottom: 1rem;
+    margin-bottom: 0; 
     width: 20rem;
     height: 7.5rem;
 }
@@ -120,7 +122,7 @@ gap: 1rem;
     margin-left: 1rem;
 }
 
-.container-exp {
+.container-experiences {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1.5rem;
@@ -128,16 +130,22 @@ gap: 1rem;
 
 .card-experiences {
     background: var(--second-color);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 8px;
     text-align: center;
     color: var(--first-color-text);
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: center;
+    min-height: 300px;
 }
 
 .card-experiences img {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 1rem;
+    width: 12rem;
+    height: 12rem;
+    object-fit: contain;
+    object-position: center;
+    margin: auto;
 }
 
 .card-experiences progress {
@@ -162,4 +170,31 @@ hr{
 
 .main-container>section>h2{
     margin-top: -2.5rem;
+}
+
+.card-experiences>img{
+    width: 12rem;
+    height: 12rem;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 0.5rem;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--third-color); 
+    border-radius: 4px;
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--third-color);
+    border-radius: 4px;
+}
+
+#experiences2 {
+    width: 14rem;
+    height: 14rem;
+    transform: scale(1.3);
 }
