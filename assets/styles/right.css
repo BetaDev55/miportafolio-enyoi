@@ -136,3 +136,18 @@ hr{
     background-color: #94A3B8;
     margin-bottom: 1rem;
 }
+
+.container-description-card{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 13rem;
+    margin-top: -3.5rem;
+}
+
+.container-description-card>a{
+    display: flex;
+    align-self: center;
+    width: 8rem;
+    margin-top: auto;
+}

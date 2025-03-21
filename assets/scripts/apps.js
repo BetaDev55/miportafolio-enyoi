@@ -24,7 +24,7 @@ const projects = [
         idProject: 4,
         imgProject: '/assets/images/BetaDev.png',
         titleproject: 'Proyecto final de Lumetrio en Python.',
-        descriptionproject: 'Un buscaminas hecho puramente en la consola CMD.',
+        descriptionproject: 'Un buscaminas hecho puramente en python para la consola CMD.',
         linkproject: 'https://github.com/BetaDev55/ProyectoFinalLumetrioPython',
     },
 ]
@@ -32,31 +32,31 @@ const projects = [
 const references = [
     {
         id: 1,
-        name: "",
-        position: "",
-        phone: "",
-        email: "",
+        name: "Santiago Betancur",
+        position: "Desarrollador de Software",
+        phone: "+57 (301) 234-5678",
+        email: "santiago.b@techcorp.com",
     },
     {
         id: 2,
-        name: "",
-        position: "",
-        phone: "",
-        email: "",
+        name: "Miguel Chen",
+        position: "Líder Técnico",
+        phone: "+57 (304) 567-8901",
+        email: "m.chen@devteam.com",
     },
     {
         id: 3,
-        name: "",
-        position: "",
-        phone: "",
-        email: "",
+        name: "Laura Martínez",
+        position: "Gerente de Proyectos",
+        phone: "+57 (305) 678-9012",
+        email: "l.martinez@projecthub.com",
     },
     {
         id: 4,
-        name: "",
-        position: "",
-        phone: "",
-        email: "",
+        name: "David Wilson",
+        position: "Desarrollador Frontend",
+        phone: "+57 (300) 789-0123",
+        email: "d.wilson@webdev.com",
     },
 ]
 
@@ -76,7 +76,7 @@ const experience = [
     {
         id: 3,
         nombreLenguaje: "JavaScript",
-        progressPercentage: 35,
+        progressPercentage: 35, 
         img: "",
     },
     {
@@ -103,6 +103,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 function loadSetionProjects() {
     projects.forEach(project => CreateCardProjects(project))
+    references.forEach(references => createCardReferences(references))
 }
 
 function CreateCardProjects(project) {
@@ -133,6 +134,34 @@ function CreateCardProjects(project) {
     containerDescription.appendChild(goToProject)
 
     document.querySelector('.container-cards').appendChild(cardProject)
+}
+
+function createCardReferences(references) {
+    const cardReferences = document.createElement('div')
+    cardReferences.classList.add('card-references')
+    const name = document.createElement('p')
+    name.textContent = "Nombre:"
+    const nameS = document.createElement('span')
+    nameS.textContent = references.name
+    const position = document.createElement('p')
+    position.textContent = "Posición:"
+    const positionS = document.createElement('span')
+    positionS.textContent = references.position
+    const phone = document.createElement('p')
+    phone.textContent = "Teléfono:"
+    const phoneS = document.createElement('span')
+    phoneS.textContent = references.phone
+    const email = document.createElement('p')
+    email.textContent = "Email:"
+    const emailS = document.createElement('span')
+    emailS.textContent = references.email
+
+    cardReferences.appendChild(nameS)
+    cardReferences.appendChild(positionS)
+    cardReferences.appendChild(phoneS)
+    cardReferences.appendChild(emailS)
+
+    document.querySelector('.container-references').appendChild(cardReferences)
 }
 
 loadSetionProjects()
