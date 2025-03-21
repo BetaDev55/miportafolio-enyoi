@@ -33,7 +33,7 @@ const references = [
     {
         id: 1,
         name: "Santiago Betancur",
-        position: "Desarrollador de Software",
+        position: "Desarrollador Front-End",
         phone: "+57 (301) 234-5678",
         email: "santiago.b@techcorp.com",
     },
@@ -54,13 +54,13 @@ const references = [
     {
         id: 4,
         name: "David Wilson",
-        position: "Desarrollador Frontend",
+        position: "Desarrollador Front-End",
         phone: "+57 (300) 789-0123",
         email: "d.wilson@webdev.com",
     },
 ]
 
-const experience = [
+const experiences = [
     {
         id: 1,
         languageName: "JavaScript",
@@ -104,6 +104,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function loadSetionProjects() {
     projects.forEach(project => CreateCardProjects(project))
     references.forEach(references => createCardReferences(references))
+    experiences.forEach(experiences => createCardexperiences(experiences))
 }
 
 function CreateCardProjects(project) {
@@ -140,28 +141,34 @@ function createCardReferences(references) {
     const cardReferences = document.createElement('div')
     cardReferences.classList.add('card-references')
     const name = document.createElement('p')
-    name.textContent = "Nombre:"
+    name.textContent = "Nombre: "
     const nameS = document.createElement('span')
     nameS.textContent = references.name
+    name.appendChild(nameS)
     const position = document.createElement('p')
-    position.textContent = "Posición:"
+    position.textContent = "Posición: "
     const positionS = document.createElement('span')
     positionS.textContent = references.position
+    position.appendChild(positionS) 
     const phone = document.createElement('p')
-    phone.textContent = "Teléfono:"
+    phone.textContent = "Teléfono: "
     const phoneS = document.createElement('span')
     phoneS.textContent = references.phone
+    phone.appendChild(phoneS)  
     const email = document.createElement('p')
-    email.textContent = "Email:"
+    email.textContent = "Email: "
     const emailS = document.createElement('span')
     emailS.textContent = references.email
+    email.appendChild(emailS)
 
-    cardReferences.appendChild(nameS)
-    cardReferences.appendChild(positionS)
-    cardReferences.appendChild(phoneS)
-    cardReferences.appendChild(emailS)
+    cardReferences.appendChild(name)
+    cardReferences.appendChild(position)
+    cardReferences.appendChild(phone)
+    cardReferences.appendChild(email)
 
     document.querySelector('.container-references').appendChild(cardReferences)
 }
+
+
 
 loadSetionProjects()

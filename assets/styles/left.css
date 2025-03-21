@@ -111,3 +111,14 @@ h1.name-profile {
     font-size: 1.5rem;
 }
 
+.container-references {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.card-references {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
