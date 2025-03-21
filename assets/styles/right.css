@@ -61,10 +61,6 @@
     font-size: 0.9rem;
 }
 
-.container-description-card > a {
-
-}
-
 .container-description-card h3 {
     margin-bottom: 0.5rem;
     color: var(--third-color);
@@ -87,12 +83,20 @@
     width: 8rem;
     margin-top: auto;
 }
+.container-references{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;
+}
 
 .container-description-card a:hover {
     background: var(--first-color);
 }
 
 .card-references {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--second-color);
     padding: 1.5rem;
     border-radius: 8px;
@@ -154,4 +158,8 @@ hr{
     color: #94A3B8;
     background-color: #94A3B8;
     margin-bottom: 1rem;
+}
+
+.main-container>section>h2{
+    margin-top: -2.5rem;
 }
